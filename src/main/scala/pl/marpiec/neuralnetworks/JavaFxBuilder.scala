@@ -6,6 +6,7 @@ import javafx.beans.value.{ChangeListener, ObservableValue}
 import javafx.collections.{FXCollections, ObservableList}
 import javafx.embed.swing.SwingFXUtils
 import javafx.event.{ActionEvent, EventHandler}
+import javafx.scene.canvas.Canvas
 import javafx.scene.control.{Button, ListView, TextArea}
 import javafx.scene.image.ImageView
 import javafx.scene.input.{KeyEvent, MouseEvent}
@@ -90,6 +91,10 @@ object JavaFxBuilder {
       })
     }
     textArea
+  }
+
+  def Canvas(width: Double, height: Double): Canvas = {
+    new Canvas(width, height)
   }
 
   def Rectangle(x: Double, y: Double, width: Double, height: Double, fill: Color = null,
